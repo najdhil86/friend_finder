@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend Finder</title>
+</head>
+<body>
+    <h2>About You</h2>
+    <form id="insertForm" action="/insert" method="POST">
+        <h4>What is your name? (Required)</h4>
+		<input type="text" name="friend_name" placeholder="Name">
+        <h4>Share a link to your image (Required)</h4>
+		<input type="text" name="friend_picture_link" placeholder="Share a link to your picture?">
+		<button>Add</button>
+	</form>
+
+	<ul></ul>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		displayPresidents();
+
+		$("#insertForm button").on('click', insertPresident);
+
+		function displayPresidents(){
+			$.ajax({
+				url: '/questions',
+				method: 'GET'
+			}).then(function(res){
+				for (var i=0; i<res.length; i++){
+					var li = $('<li>');
+					li.text(res[i]['question']);
+
+					var f = $('<form>')
+					f.attr('action', '/delete?_method=DELETE');
+					f.attr('method', 'POST');
+						var inp = $('<input>');
+							inp.attr('type', 'hidden');
+							inp.attr('name', 'id');
+							inp.attr('value', res[i].id)
+						var b = $('<button>').text('delete');
+
+					f.append(inp, b);
+
+					li.append(f)
+					$('ul').append(li);
+				}
+				// $('div').text(JSON.stringify(res));
+			})
+		}
+
+		function insertPresident(){
+			event.preventDefault();
+			
+			var pn = $("#insertForm input[name=pres_name]").val();
+
+			// in the data: object, I needed to put pres_name as the key because we need req.body.pres_name to exist
+			$.ajax({
+				url: '/insert',
+				method: 'POST',
+				data: {pres_name : pn}
+			}).then(function(res){
+				displayPresidents();
+			});
+		}
+		
+
+
+		
+
+
+
+	</script>
+</body>
+</html>
