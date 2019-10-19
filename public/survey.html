@@ -1,70 +1,280 @@
 <!DOCTYPE html>
 <html>
 <head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<title>Friend Finder</title>
 </head>
 <body>
-    <h2>About You</h2>
-    <form id="insertForm" action="/insert" method="POST">
-        <h4>What is your name? (Required)</h4>
-		<input type="text" name="friend_name" placeholder="Name">
-        <h4>Share a link to your image (Required)</h4>
-		<input type="text" name="friend_picture_link" placeholder="Share a link to your picture?">
-		<button>Add</button>
-	</form>
 
-	<ul></ul>
+	<div class="container">
+
+			<h1>Survey Questions</h1>
+			<hr>
+		
+			
+			<h2>About You</h2>
+			<br>
+
+			<form id="userForm" action="/insert" method="POST">
+				<h4>What is your name? (Required)</h4>
+				<input type="text" name="friend_name" placeholder="Name">
+				<h4>Share a link to your image (Required)</h4>
+				<input type="text" name="friend_picture_link" placeholder="Share a link to your picture?">
+				<button>Add</button>
+			</form>
+
+			<br>
+
+			<form id="userAns" action="/userAns" method="post">
+			
+				<h3>Question 1</h3>
+				<h5>From a scale of 10, how much do you like sports?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+							<option selected>Choose...</option> 
+							<option>1</option>
+						  	<option>2</option>
+						  	<option>3</option>
+						  	<option>4</option>
+						  	<option>5</option>
+						</select>
+					
+				</div>
+	
+				<h3>Question 2</h3>
+				<h5>From a scale of 10, how much do you like football?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+	
+				<h3>Question 3</h3>
+				<h5>From a scale of 10, how much do you like 49ers?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+				
+				<h3>Question 4</h3>
+				<h5>From a scale of 10, how much do you like Raiders?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+				
+				<h3>Question 5</h3>
+				<h5>FFrom a scale of 10, how much do you like Futbol?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+				
+				<h3>Question 6</h3>
+				<h5>From a scale of 10, how much do you like Real Mardrid?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+	
+				<h3>Question 7</h3>
+				<h5>From a scale of 10, how much do you like Barcelona FC?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+				
+				<h3>Question 8</h3>
+				<h5>From a scale of 10, how much do you like Liverpool FC?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+	
+				<h3>Question 9</h3>
+				<h5>From a scale of 10, how much do you like Baseball?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+				
+				<h3>Question 10</h3>
+				<h5>From a scale of 10, how much do you like San Francisco Giants?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+				
+				<h3>Question 11</h3>
+				<h5>From a scale of 10, how much do you like Oakland As?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+				
+				<h3>Question 11</h3>
+				<h5>From a scale of 10, how much do you like Oakland As?</h5>
+			
+				<div class="form-group">
+					
+						<label for="exampleFormControlSelect1">Select your Answer:</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					
+				</div>
+			</form>
+
+
+	</div>
 
 	<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	  crossorigin="anonymous"></script>
+
 	<script type="text/javascript">
-		displayPresidents();
+		// displayPresidents();
 
-		$("#insertForm button").on('click', insertPresident);
+		// $("#insertForm button").on('click', insertPresident);
 
-		function displayPresidents(){
-			$.ajax({
-				url: '/questions',
-				method: 'GET'
-			}).then(function(res){
-				for (var i=0; i<res.length; i++){
-					var li = $('<li>');
-					li.text(res[i]['question']);
+		// function displayPresidents(){
+		// 	$.ajax({
+		// 		url: '/questions',
+		// 		method: 'GET'
+		// 	}).then(function(res){
+		// 		for (var i=0; i<res.length; i++){
+		// 			var li = $('<li>');
+		// 			li.text(res[i]['question']);
 
-					var f = $('<form>')
-					f.attr('action', '/delete?_method=DELETE');
-					f.attr('method', 'POST');
-						var inp = $('<input>');
-							inp.attr('type', 'hidden');
-							inp.attr('name', 'id');
-							inp.attr('value', res[i].id)
-						var b = $('<button>').text('delete');
+		// 			var f = $('<form>')
+		// 			f.attr('action', '/delete?_method=DELETE');
+		// 			f.attr('method', 'POST');
+		// 				var inp = $('<input>');
+		// 					inp.attr('type', 'hidden');
+		// 					inp.attr('name', 'id');
+		// 					inp.attr('value', res[i].id)
+		// 				var b = $('<button>').text('delete');
 
-					f.append(inp, b);
+		// 			f.append(inp, b);
 
-					li.append(f)
-					$('ul').append(li);
-				}
-				// $('div').text(JSON.stringify(res));
-			})
-		}
+		// 			li.append(f)
+		// 			$('ul').append(li);
+		// 		}
+		// 		// $('div').text(JSON.stringify(res));
+		// 	})
+		// }
 
-		function insertPresident(){
-			event.preventDefault();
+		// function insertPresident(){
+		// 	event.preventDefault();
 			
-			var pn = $("#insertForm input[name=pres_name]").val();
+		// 	var pn = $("#insertForm input[name=pres_name]").val();
 
-			// in the data: object, I needed to put pres_name as the key because we need req.body.pres_name to exist
-			$.ajax({
-				url: '/insert',
-				method: 'POST',
-				data: {pres_name : pn}
-			}).then(function(res){
-				displayPresidents();
-			});
-		}
+		// 	// in the data: object, I needed to put pres_name as the key because we need req.body.pres_name to exist
+		// 	$.ajax({
+		// 		url: '/insert',
+		// 		method: 'POST',
+		// 		data: {pres_name : pn}
+		// 	}).then(function(res){
+		// 		displayPresidents();
+		// 	});
+		// }
 		
 
 
