@@ -7,7 +7,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'tJvnjAtbMWtqW9HmmZBDGiZk',
+    password : 'password',
     database : 'friend_finder_db'
 });
 
