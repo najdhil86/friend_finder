@@ -15,17 +15,18 @@
 			<h2>About You</h2>
 			<br>
 
-			<form id="userForm" action="/insert" method="POST">
+			<form id="userForm" action="/insert-friend" method="POST">
 				<h4>What is your name? (Required)</h4>
 				<input type="text" name="friend_name" placeholder="Name">
 				<h4>Share a link to your image (Required)</h4>
 				<input type="text" name="friend_picture_link" placeholder="Share a link to your picture?">
-				<button>Add</button>
+				<br><br>
+				<button>Submit</button>
 			</form>
 
 			<br>
 
-			<form id="userAns" action="/userAns" method="post">
+			<form id="userAns" action="/userAns" method="POST">
 			
 				<h3>Question 1</h3>
 				<h5>From a scale of 10, how much do you like sports?</h5>
@@ -51,6 +52,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -67,6 +69,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -83,6 +86,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -99,6 +103,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -115,6 +120,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -131,6 +137,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -147,6 +154,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -163,6 +171,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -179,6 +188,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -195,6 +205,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -211,6 +222,7 @@
 					
 						<label for="exampleFormControlSelect1">Select your Answer:</label>
 						<select class="form-control" id="exampleFormControlSelect1">
+						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
 						  <option>3</option>
@@ -220,9 +232,15 @@
 					
 				</div>
 			</form>
-
-
 	</div>
+
+    <div class="container">
+		<div class="row">
+		  <footer>
+			<div class="row"><a href="/friends">Friends List </a> |<a href="/friends.json">Github Repo</a></div>
+		  </footer>
+		</div>
+	  </div>
 
 	<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
