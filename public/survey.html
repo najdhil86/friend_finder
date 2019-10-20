@@ -15,18 +15,17 @@
 			<h2>About You</h2>
 			<br>
 
-			<form id="userForm" action="/insert-friend" method="POST">
+			<form action="/insert-friend" method="GET">
 				<h4>What is your name? (Required)</h4>
 				<input type="text" name="friend_name" placeholder="Name">
 				<h4>Share a link to your image (Required)</h4>
 				<input type="text" name="friend_picture_link" placeholder="Share a link to your picture?">
 				<br><br>
 				<button>Submit</button>
-			</form>
+			
 
 			<br>
-
-			<form id="userAns" action="/userAns" method="POST">
+			<br>
 			
 				<h3>Question 1</h3>
 				<h5>From a scale of 10, how much do you like sports?</h5>
@@ -231,16 +230,16 @@
 						</select>
 					
 				</div>
+
 			</form>
 	</div>
 
-    <div class="container">
-		<div class="row">
-		  <footer>
+	<footer>
+		<div class="container">
 			<div class="row"><a href="/friends">Friends List </a> |<a href="/friends.json">Github Repo</a></div>
-		  </footer>
 		</div>
-	  </div>
+		  </footer>
+		
 
 	<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -248,6 +247,13 @@
 	  crossorigin="anonymous"></script>
 
 	<script type="text/javascript">
+
+	$.ajax({
+		url:'/insert-friend',
+		method: 'GET'
+	}).then(function(res){
+		console.log(res);
+	})
 		// displayPresidents();
 
 		// $("#insertForm button").on('click', insertPresident);

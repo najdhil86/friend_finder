@@ -32,15 +32,15 @@ app.get('/friends',function(req,res){
     })
 });
 
-app.post('/insert-friend',function(req,res){
+app.get('/insert-friend',function(req,res){
 
     console.log(req.query.friend_name);
     console.log(req.query.friend_picture_link);
 
-    // connection.query('insert into friends (name,picture_link) values ?',insert_friend_data,function(error,results,field){
-    //     if (error) res.send(error)
-    //     else res.redirect('/survey')
-    // })
+    connection.query('insert into friends (name,picture_link) values ?',[req.query.friend_name,req.query.friend_picture_link],function(error,results,field){
+        if (error) res.send(error)
+        else console.log(results)
+    })
 
 })
 
