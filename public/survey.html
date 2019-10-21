@@ -15,14 +15,13 @@
 			<h2>About You</h2>
 			<br>
 
-			<form action="/insert-friend" method="GET">
+			<form action="/insert-friend" method="GET" id="survey-form">
 				<h4>What is your name? (Required)</h4>
 				<input type="text" name="friend_name" placeholder="Name">
 				<h4>Share a link to your image (Required)</h4>
 				<input type="text" name="friend_picture_link" placeholder="Share a link to your picture?">
 				<br><br>
-				<button>Submit</button>
-			
+		
 
 			<br>
 			<br>
@@ -32,8 +31,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question1">Select your Answer:</label>
+						<select class="form-control" id="question1" name="question1">
 							<option selected>Choose...</option> 
 							<option>1</option>
 						  	<option>2</option>
@@ -49,8 +48,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question2">Select your Answer:</label>
+						<select class="form-control" id="question2" name="question2">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -66,8 +65,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question3">Select your Answer:</label>
+						<select class="form-control" id="question3" name="question3">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -83,8 +82,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question4">Select your Answer:</label>
+						<select class="form-control" id="question4" name="question4">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -100,8 +99,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question5">Select your Answer:</label>
+						<select class="form-control" id="question5" name="question5"> 
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -117,8 +116,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question6">Select your Answer:</label>
+						<select class="form-control" id="question6" name="question6">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -134,8 +133,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question7">Select your Answer:</label>
+						<select class="form-control" id="question7" name="question7">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -151,8 +150,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question8">Select your Answer:</label>
+						<select class="form-control" id="question8" name="question">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -168,8 +167,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question9">Select your Answer:</label>
+						<select class="form-control" id="question9" name="question9">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -185,8 +184,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question10">Select your Answer:</label>
+						<select class="form-control" id="question10" name="question10">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -202,8 +201,8 @@
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question11">Select your Answer:</label>
+						<select class="form-control" id="question11" name="question11">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -214,13 +213,13 @@
 					
 				</div>
 				
-				<h3>Question 11</h3>
+				<h3>Question 12</h3>
 				<h5>From a scale of 10, how much do you like Oakland As?</h5>
 			
 				<div class="form-group">
 					
-						<label for="exampleFormControlSelect1">Select your Answer:</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<label for="question12">Select your Answer:</label>
+						<select class="form-control" id="question12" name="question12">
 						  <option selected>Choose...</option>  
 						  <option>1</option>
 						  <option>2</option>
@@ -231,12 +230,15 @@
 					
 				</div>
 
+				<button class="btn btn-primary" id="submit">Submit</button>
+
 			</form>
+			<br>
 	</div>
 
 	<footer>
 		<div class="container">
-			<div class="row"><a href="/friends">Friends List </a> |<a href="/friends.json">Github Repo</a></div>
+			<a href="/friends">Friends List </a> |<a href="/friends.json">Github Repo</a>
 		</div>
 		  </footer>
 		
@@ -248,12 +250,24 @@
 
 	<script type="text/javascript">
 
-	$.ajax({
-		url:'/insert-friend',
-		method: 'GET'
-	}).then(function(res){
-		console.log(res);
+	$('#submit').on('click',function(work){
+		
+		event.preventDefault();
+
+		var survey_data = $('#survey-form').val()
+
+		console.log(survey_data);
+		
+
 	})
+
+	// $.ajax({
+	// 	url:'/insert-friend',
+	// 	method: 'POST',
+	// 	data: {}
+	// }).then(function(res){
+	// 	console.log(res);
+	// })
 		// displayPresidents();
 
 		// $("#insertForm button").on('click', insertPresident);
