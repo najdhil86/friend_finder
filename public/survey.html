@@ -10,18 +10,17 @@
 
 			<h1>Survey Questions</h1>
 			<hr>
-		
-			
 			<h2>About You</h2>
 			<br>
 
-			<form action="/insert-friend" method="GET" id="survey-form">
+			<form action="/insert-friend" method="POST" id="survey-form">
 				<h4>What is your name? (Required)</h4>
-				<input type="text" name="friend_name" placeholder="Name">
+				<input type="text" id="friend_name" name="friend_name" placeholder="Name">
 				<h4>Share a link to your image (Required)</h4>
-				<input type="text" name="friend_picture_link" placeholder="Share a link to your picture?">
+				<input type="text" id="friend_picture_link" name="friend_picture_link" placeholder="Share a link to your picture?">
 				<br><br>
-		
+				
+			
 
 			<br>
 			<br>
@@ -31,14 +30,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question1">Select your Answer:</label>
-						<select class="form-control" id="question1" name="question1">
+						<label for="ques1">Select your Answer:</label>
+						<select class="form-control" id="ques1">
 							<option selected>Choose...</option> 
-							<option>1</option>
-						  	<option>2</option>
-						  	<option>3</option>
-						  	<option>4</option>
-						  	<option>5</option>
+							<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -48,14 +47,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question2">Select your Answer:</label>
-						<select class="form-control" id="question2" name="question2">
+						<label for="ques2">Select your Answer:</label>
+						<select class="form-control" id="ques2">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -65,14 +64,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question3">Select your Answer:</label>
-						<select class="form-control" id="question3" name="question3">
+						<label for="ques3">Select your Answer:</label>
+						<select class="form-control" id="ques3">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -82,14 +81,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question4">Select your Answer:</label>
-						<select class="form-control" id="question4" name="question4">
+						<label for="ques4">Select your Answer:</label>
+						<select class="form-control" id="ques4">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -99,14 +98,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question5">Select your Answer:</label>
-						<select class="form-control" id="question5" name="question5"> 
+						<label for="ques5">Select your Answer:</label>
+						<select class="form-control" id="ques5">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -116,14 +115,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question6">Select your Answer:</label>
-						<select class="form-control" id="question6" name="question6">
+						<label for="ques6">Select your Answer:</label>
+						<select class="form-control" id="ques6">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -133,14 +132,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question7">Select your Answer:</label>
-						<select class="form-control" id="question7" name="question7">
+						<label for="ques7">Select your Answer:</label>
+						<select class="form-control" id="ques7">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -150,14 +149,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question8">Select your Answer:</label>
-						<select class="form-control" id="question8" name="question">
+						<label for="ques8">Select your Answer:</label>
+						<select class="form-control" id="ques8">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -167,14 +166,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question9">Select your Answer:</label>
-						<select class="form-control" id="question9" name="question9">
+						<label for="ques9">Select your Answer:</label>
+						<select class="form-control" id="ques9">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -184,14 +183,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question10">Select your Answer:</label>
-						<select class="form-control" id="question10" name="question10">
+						<label for="ques10">Select your Answer:</label>
+						<select class="form-control" id="ques10">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -201,14 +200,14 @@
 			
 				<div class="form-group">
 					
-						<label for="question11">Select your Answer:</label>
-						<select class="form-control" id="question11" name="question11">
+						<label for="ques11">Select your Answer:</label>
+						<select class="form-control" id="ques11">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
@@ -218,27 +217,26 @@
 			
 				<div class="form-group">
 					
-						<label for="question12">Select your Answer:</label>
-						<select class="form-control" id="question12" name="question12">
+						<label for="ques12">Select your Answer:</label>
+						<select class="form-control" id="ques12">
 						  <option selected>Choose...</option>  
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
+						  	<option value="1">1</option>
+						  	<option value="2">2</option>
+						  	<option value="3">3</option>
+						  	<option value="4">4</option>
+						  	<option value="5">5</option>
 						</select>
 					
 				</div>
 
-				<button class="btn btn-primary" id="submit">Submit</button>
+				<button class="btn btn-primary" id="submit-button">Submit</button>
 
 			</form>
-			<br>
 	</div>
 
 	<footer>
 		<div class="container">
-			<a href="/friends">Friends List </a> |<a href="/friends.json">Github Repo</a>
+			<div class="row"><a href="/friends">Friends List </a> |<a href="/friends.json">Github Repo</a></div>
 		</div>
 		  </footer>
 		
@@ -250,76 +248,56 @@
 
 	<script type="text/javascript">
 
-	$('#submit').on('click',function(work){
+	$("#submit-button").on("click", function(){
+
+		var ques1 = $('ques1').val()
+		var ques2 = $('ques2').val()
+		var ques3 = $('ques3').val()
+		var ques4 = $('ques4').val()
+		var ques5 = $('ques5').val()
+		var ques6 = $('ques6').val()
+		var ques7 = $('ques7').val()
+		var ques8 = $('ques8').val()
+		var ques9 = $('ques9').val()
+		var ques10 = $('ques10').val()
+		var ques11 = $('ques11').val()
+		var ques12 = $('ques12').val()
 		
-		event.preventDefault();
+		var userResults = {
+			name: $(),
+			user_picture: $('#friend_picture_link').val(),
+			scores: [
+			$('ques1').val(),
+			$('ques2').val(),
+			$('ques3').val(),
+			$('ques4').val(),
+			$('ques5').val(),
+			$('ques6').val(),
+			$('ques7').val(),
+			$('ques8').val(),
+			$('ques9').val(),
+			$('ques10').val(),
+			$('ques11').val(),
+			$('ques12').val()
+		]
+		}
 
-		var survey_data = $('#survey-form').val()
-
-		console.log(survey_data);
+		
 		
 
+		$.ajax({
+			url: '/insert-friend',
+			method: 'POST',
+			data: userResults
+		}).then(function(res){
+			console.log("res" + res);
+		})
+		
+
+
+
+		
 	})
-
-	// $.ajax({
-	// 	url:'/insert-friend',
-	// 	method: 'POST',
-	// 	data: {}
-	// }).then(function(res){
-	// 	console.log(res);
-	// })
-		// displayPresidents();
-
-		// $("#insertForm button").on('click', insertPresident);
-
-		// function displayPresidents(){
-		// 	$.ajax({
-		// 		url: '/questions',
-		// 		method: 'GET'
-		// 	}).then(function(res){
-		// 		for (var i=0; i<res.length; i++){
-		// 			var li = $('<li>');
-		// 			li.text(res[i]['question']);
-
-		// 			var f = $('<form>')
-		// 			f.attr('action', '/delete?_method=DELETE');
-		// 			f.attr('method', 'POST');
-		// 				var inp = $('<input>');
-		// 					inp.attr('type', 'hidden');
-		// 					inp.attr('name', 'id');
-		// 					inp.attr('value', res[i].id)
-		// 				var b = $('<button>').text('delete');
-
-		// 			f.append(inp, b);
-
-		// 			li.append(f)
-		// 			$('ul').append(li);
-		// 		}
-		// 		// $('div').text(JSON.stringify(res));
-		// 	})
-		// }
-
-		// function insertPresident(){
-		// 	event.preventDefault();
-			
-		// 	var pn = $("#insertForm input[name=pres_name]").val();
-
-		// 	// in the data: object, I needed to put pres_name as the key because we need req.body.pres_name to exist
-		// 	$.ajax({
-		// 		url: '/insert',
-		// 		method: 'POST',
-		// 		data: {pres_name : pn}
-		// 	}).then(function(res){
-		// 		displayPresidents();
-		// 	});
-		// }
-		
-
-
-		
-
-
-
 	</script>
 </body>
 </html>

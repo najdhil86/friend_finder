@@ -1,8 +1,9 @@
 var express = require('express');
 var app = express();
+
 var bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use(express.static("public"));
@@ -12,7 +13,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'password',
+    password : 'tJvnjAtbMWtqW9HmmZBDGiZk',
     database : 'friend_finder_db'
 });
 
@@ -37,10 +38,13 @@ app.get('/friends',function(req,res){
 
 app.post('/insert-friend',function(req,res){
 
-    res.json(req.body)
+    req.json("req.body:" +req.body);
+    console.log("res.body:" + res.body);
+    console.log("req.query:" +req.query);
     
-    console.log(req.body.friend_name);
-    console.log(req.body.friend_picture_link);
+    
+    // console.log(req.body.friend_name);
+    // console.log(req.body.friend_picture_link);
 
     // connection.query('insert into friends (name,picture_link) values ?',[req.query.friend_name,req.query.friend_picture_link],function(error,results,field){
     //     if (error) res.send(error)
