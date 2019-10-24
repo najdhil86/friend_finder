@@ -14,14 +14,14 @@
 			<br>
 
 			<form action="/insert-friend" method="POST" id="survey-form">
+				
 				<h4>What is your name? (Required)</h4>
 				<input type="text" id="friend_name" name="friend_name" placeholder="Name">
+
 				<h4>Share a link to your image (Required)</h4>
 				<input type="text" id="friend_picture_link" name="friend_picture_link" placeholder="Share a link to your picture?">
 				<br><br>
 				
-			
-
 			<br>
 			<br>
 			
@@ -59,7 +59,7 @@
 					
 				</div>
 	
-				<h3>Question 3</h3>
+				<!-- <h3>Question 3</h3>
 				<h5>From a scale of 10, how much do you like 49ers?</h5>
 			
 				<div class="form-group">
@@ -227,9 +227,9 @@
 						  	<option value="5">5</option>
 						</select>
 					
-				</div>
+				</div> -->
 
-				<button class="btn btn-primary" id="submit-button">Submit</button>
+				<input type="submit" value="Submit" id="submit-button" class="btn btn-primary">
 
 			</form>
 	</div>
@@ -250,52 +250,37 @@
 
 	$("#submit-button").on("click", function(){
 
-		var ques1 = $('ques1').val()
-		var ques2 = $('ques2').val()
-		var ques3 = $('ques3').val()
-		var ques4 = $('ques4').val()
-		var ques5 = $('ques5').val()
-		var ques6 = $('ques6').val()
-		var ques7 = $('ques7').val()
-		var ques8 = $('ques8').val()
-		var ques9 = $('ques9').val()
-		var ques10 = $('ques10').val()
-		var ques11 = $('ques11').val()
-		var ques12 = $('ques12').val()
+		var ques1 = $('#ques1').val()
+		var ques2 = $('#ques2').val()
+/* 		var ques3 = $('#ques3').val()
+		var ques4 = $('#ques4').val()
+		var ques5 = $('#ques5').val()
+		var ques6 = $('#ques6').val()
+		var ques7 = $('#ques7').val()
+		var ques8 = $('#ques8').val()
+		var ques9 = $('#ques9').val()
+		var ques10 = $('#ques10').val()
+		var ques11 = $('#ques11').val()
+		var ques12 = $('#ques12').val() */
+		
+
+		// var scores = {ques1,ques2,ques3,ques4,ques5,ques6,ques7,ques8,ques9,ques10}
 		
 		var userResults = {
-			name: $(),
+			name: $('#friend_name').val(),
 			user_picture: $('#friend_picture_link').val(),
-			scores: [
-			$('ques1').val(),
-			$('ques2').val(),
-			$('ques3').val(),
-			$('ques4').val(),
-			$('ques5').val(),
-			$('ques6').val(),
-			$('ques7').val(),
-			$('ques8').val(),
-			$('ques9').val(),
-			$('ques10').val(),
-			$('ques11').val(),
-			$('ques12').val()
-		]
+			scores: [ques1,ques2]
 		}
-
-		
-		
-
+	
 		$.ajax({
 			url: '/insert-friend',
 			method: 'POST',
 			data: userResults
 		}).then(function(res){
-			console.log("res" + res);
-		})
+
 		
 
-
-
+		})
 		
 	})
 	</script>

@@ -13,7 +13,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'tJvnjAtbMWtqW9HmmZBDGiZk',
+    password : 'password',
     database : 'friend_finder_db'
 });
 
@@ -38,13 +38,9 @@ app.get('/friends',function(req,res){
 
 app.post('/insert-friend',function(req,res){
 
-    req.json("req.body:" +req.body);
-    console.log("res.body:" + res.body);
-    console.log("req.query:" +req.query);
-    
-    
-    // console.log(req.body.friend_name);
-    // console.log(req.body.friend_picture_link);
+    console.log(req.body.friend_name);
+    console.log(req.body.friend_picture_link);
+
 
     // connection.query('insert into friends (name,picture_link) values ?',[req.query.friend_name,req.query.friend_picture_link],function(error,results,field){
     //     if (error) res.send(error)
