@@ -13,7 +13,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'password',
+    password : 'tJvnjAtbMWtqW9HmmZBDGiZk',
     database : 'friend_finder_db'
 });
 
@@ -38,14 +38,40 @@ app.get('/friends',function(req,res){
 
 app.post('/insert-friend',function(req,res){
 
-    console.log(req.body.friend_name);
-    console.log(req.body.friend_picture_link);
+    var friend_name = req.body.friend_name;
+    var friend_picture_link = req.body.friend_picture_link
 
+    var ques1 = req.body.ques1;
+    var ques2 = req.body.ques2;
+    var ques3 = req.body.ques3;
+    var ques4 = req.body.ques4;
+    var ques5 = req.body.ques5;
+    var ques6 = req.body.ques6;
+    var ques7 = req.body.ques7;
+    var ques8 = req.body.ques8;
+    var ques9 = req.body.ques9;
+    var ques10 = req.body.ques10;
 
-    // connection.query('insert into friends (name,picture_link) values ?',[req.query.friend_name,req.query.friend_picture_link],function(error,results,field){
-    //     if (error) res.send(error)
-    //     else console.log(results)
-    // })
+    var score = [ques1,ques2,ques3,ques4,ques5,ques6,ques7,ques8,ques9,ques10];
+
+    connection.query('insert into friends (name,picture_link) values (?,?)',[friend_name,friend_picture_link],function(error,results,field){
+        if (error) res.send(error)
+        else res.redirect('/home.html')
+    })
+    
+    connection.query('select id from friends where name = (?)', [friend_name], function(error,results,fields){
+        if(error) res.send(error)
+        else {
+            var friend_name_obj = JSON.stringify(results)
+            console.log("ID: " + friend_name_obj);
+            
+        }
+    })
+})
+
+app.get('/friend-result',function(req,res){
+
+    
 
 })
 
