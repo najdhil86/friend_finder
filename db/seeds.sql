@@ -1,4 +1,4 @@
 INSERT INTO questions (question) VALUES ('From a scale of 10, how much do you like sports?'), ('From a scale of 10, how much do you like foobtball?'),('From a scale of 10, how much do you like 49ers?'),('From a scale of 10, how much do you like Raiders?'),('From a scale of 10, how much do you like Futbol?'),('From a scale of 10, how much do you like Real Mardrid?'),('From a scale of 10, how much do you like Barcelona FC?'),('From a scale of 10, how much do you like Liverpool FC?'),('From a scale of 10, how much do you like Baseball?'),('From a scale of 10, how much do you like San Francisco Giants?'),('From a scale of 10, how much do you like Oakland As?'),('From a scale of 10, how much do you like Coffee?'),('From a scale of 10, how much do you like Tea?');
 
-insert into friends (name,picture_link) values ('friend1','/img/pic1.jpg');
+INSERT INTO scores (question_id, friend_id, answer) VALUES (1, 1, 10), (2, 1, 10), (3, 1, 10), (4, 1, 10), (1, 2, 2), (2, 2, 2), (3, 2, 2), (4, 2, 2), (1, 3, 5), (2, 3, 5), (3, 3, 5), (4, 3, 5), (1, 4, 7), (2, 4, 7), (3, 4, 7), (4, 4, 7), (1, 5, 1), (2, 5, 1), (3, 5, 1), (4, 5, 1);
 

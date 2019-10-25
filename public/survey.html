@@ -13,7 +13,7 @@
 			<h2>About You</h2>
 			<br>
 
-			<form action="/insert-friend" method="POST" id="survey-form">
+			<form action="#" method="POST" id="survey-form">
 				
 				<h4>What is your name? (Required)</h4>
 				<input type="text" id="friend_name" name="friend_name" placeholder="Name">
@@ -31,7 +31,7 @@
 				<div class="form-group">
 					
 						<label for="ques1">Select your Answer:</label>
-						<select class="form-control" name="ques1">
+						<select class="form-control" name="ques1" id="ques1">
 							<option selected>Choose...</option> 
 							<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -48,7 +48,7 @@
 				<div class="form-group">
 					
 						<label for="ques2">Select your Answer:</label>
-						<select class="form-control" name="ques2">
+						<select class="form-control" id="ques2" name="ques2">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -65,7 +65,7 @@
 				<div class="form-group">
 					
 						<label for="ques3">Select your Answer:</label>
-						<select class="form-control" name="ques3">
+						<select class="form-control" id="ques3" name="ques3">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -82,7 +82,7 @@
 				<div class="form-group">
 					
 						<label for="ques4">Select your Answer:</label>
-						<select class="form-control" name="ques4">
+						<select class="form-control" id="ques4" name="ques4">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -99,7 +99,7 @@
 				<div class="form-group">
 					
 						<label for="ques5">Select your Answer:</label>
-						<select class="form-control" name="ques5">
+						<select class="form-control" id="ques5" name="ques5">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -116,7 +116,7 @@
 				<div class="form-group">
 					
 						<label for="ques6">Select your Answer:</label>
-						<select class="form-control" name="ques6">
+						<select class="form-control" id="ques6" name="ques6">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -133,7 +133,7 @@
 				<div class="form-group">
 					
 						<label for="ques7">Select your Answer:</label>
-						<select class="form-control" name="ques7">
+						<select class="form-control" id="ques7" name="ques7">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -150,7 +150,7 @@
 				<div class="form-group">
 					
 						<label for="ques8">Select your Answer:</label>
-						<select class="form-control" name="ques8">
+						<select class="form-control" id="ques8" name="ques8">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -167,7 +167,7 @@
 				<div class="form-group">
 					
 						<label for="ques9">Select your Answer:</label>
-						<select class="form-control" name="ques9">
+						<select class="form-control" id="ques9" name="ques9">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -184,7 +184,7 @@
 				<div class="form-group">
 					
 						<label for="ques10">Select your Answer:</label>
-						<select class="form-control" name="ques10">
+						<select class="form-control" id="ques10" name="ques10">
 						  <option selected>Choose...</option>  
 						  	<option value="1">1</option>
 						  	<option value="2">2</option>
@@ -216,7 +216,8 @@
 
 	<script type="text/javascript">
 
-	$("#submit-button").on("click", function(){
+	$("#survey-form").on("submit", function(){
+		event.preventDefault()
 
 		var ques1 = $('#ques1').val()
 		var ques2 = $('#ques2').val()
@@ -229,11 +230,20 @@
 		var ques9 = $('#ques9').val()
 		var ques10 = $('#ques10').val()		
 
-		
+
 		var userResults = {
 			name: $('#friend_name').val(),
 			user_picture: $('#friend_picture_link').val(),
-			scores: [ques1,ques2,ques3,ques4,ques5,ques6,ques7,ques8,ques9,ques10]
+			ques1,
+			ques2,
+			ques3,
+			ques4,
+			ques5,
+			ques6,
+			ques7,
+			ques8,
+			ques9,
+			ques10
 		}
 	
 		$.ajax({
