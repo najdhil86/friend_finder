@@ -13,7 +13,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'tJvnjAtbMWtqW9HmmZBDGiZk',
+    password : 'password',
     database : 'friend_finder_db'
 });
 
@@ -38,8 +38,11 @@ app.get('/friends',function(req,res){
 
 app.post('/insert-friend',function(req,res){
 
-    var friend_name = req.body.friend_name;
+    let friend_name = req.body.friend_name;
     var friend_picture_link = req.body.friend_picture_link
+
+
+    console.log(typeof friend_name)
 
     var ques1 = req.body.ques1;
     var ques2 = req.body.ques2;
@@ -54,26 +57,48 @@ app.post('/insert-friend',function(req,res){
 
     var score = [ques1,ques2,ques3,ques4,ques5,ques6,ques7,ques8,ques9,ques10];
 
-    connection.query('insert into friends (name,picture_link) values (?,?)',[friend_name,friend_picture_link],function(error,results,field){
-        if (error) res.send(error)
-        else res.redirect('/home.html')
+    connection.query('select id from friends where name = ?',[friend_name], function(error,results,fields){
+
+        console.log(results);
+        
+        console.log(results[0].id)
     })
-    
-    connection.query('select id from friends where name = (?)', [friend_name], function(error,results,fields){
-        if(error) res.send(error)
-        else {
-            var friend_name_obj = JSON.stringify(results)
-            console.log("ID: " + friend_name_obj);
+    // connection.query('select id from friends where name = (?)', [friend_name], function(error,results,fields){
+    //         if(error) res.send(error)
+    //         else {
+
+    //             console.log(results)
+
+    //             console.log(results[0].id);                                    
+    //         }
+    //     })
+
+
+    // connection.query('insert into friends (name,picture_link) values (?,?)',[friend_name,friend_picture_link],function(error,results,field){
+    //     if (error) res.send(error)
+    //     else {
+    //         res.redirect('/home.html')
             
-        }
-    })
+    //         // connection.query('select id from friends where name = (?)', [friend_name], function(error,results,fields){
+    //         //     if(error) res.send(error)
+    //         //     else {
+
+    //         //         console.log(results[0].id);                                    
+    //         //     }
+    //         // })
+            
+    //     }
+
+
+    // })
+    
 })
 
-app.get('/friend-result',function(req,res){
+// app.get('/friend-result',function(req,res){
 
     
 
-})
+// })
 
 app.listen(3000,function(){
     console.log('listening on 3000');
